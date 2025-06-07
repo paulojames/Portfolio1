@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Paulo James | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    header {
+      background-color: #fff;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .logo {
+      font-weight: 600;
+      font-size: 1.5em;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    .nav-links li a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+    }
+
+    .menu-toggle {
+      display: none;
+      font-size: 1.8em;
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #fff;
+        flex-direction: column;
+        width: 200px;
+        display: none;
+        padding: 20px;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+    }
+
+    .hero {
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .hero-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .hero-image img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .typewriter-text {
+      font-weight: 600;
+      color: #b87333;
+      animation: popText 0.6s ease-in-out forwards;
+    }
+
+    @keyframes popText {
+      0% {
+        transform: scale(0.5);
+        opacity: 0;
+      }
+      100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    .section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .section-box {
+      background: #fff;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+      border-radius: 12px;
+      padding: 40px 30px;
+      margin-bottom: 40px;
+    }
+
+    .skills ul,
+    .certificates ul {
+      list-style: none;
+      padding-left: 20px;
+    }
+
+    .skills ul li::before {
+      content: '\f121';
+      font-family: 'Font Awesome 5 Free';
+      font-weight: 900;
+      margin-right: 10px;
+    }
+
+    .certificates ul li::before {
+      content: '\f02d';
+      font-family: 'Font Awesome 5 Free';
+      font-weight: 900;
+      margin-right: 10px;
+    }
+
+    .projects .project-list {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .projects .project {
+      padding: 15px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      background-color: #f9f9f9;
+    }
+
+    .socials a {
+      margin-right: 10px;
+      font-size: 1.5rem;
+      color: #333;
+      transition: transform 0.3s ease;
+    }
+
+    .socials a:hover {
+      transform: scale(1.2);
+    }
+
+    .contact form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      max-width: 600px;
+      margin: auto;
+    }
+
+    .btn {
+      padding: 10px 20px;
+      background-color: #b87333;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #995f28;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">Paulo James</div>
+      <button class="menu-toggle" id="menu-toggle"><i class="fas fa-bars"></i></button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#certificates">Certificates</a></li>
+        <li><a href="#contact" class="btn">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-image">
+        <img src="image/paulo.jpg" alt="Profile Image" />
+      </div>
+      <div class="hero-text">
+        <h1>Hey I'm <span>Paulo James</span></h1>
+        <h2 class="typewriter-text">I'm a BSIT Student</h2>
+        <p>I am Paulo James Rodriguez, an aspiring IT professional with a passion for creating digital solutions and designing user-friendly systems...</p>
+        <div class="socials">
+          <a href="#"><i class="fab fa-github"></i></a>
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="section section-box">
+    <h2>About Me</h2>
+    <p>Hello! I'm Paulo James Rodriguez, a dedicated BSIT student passionate about creating digital solutions and designing user-friendly systems. I enjoy learning new technologies and applying them to solve real-world problems.</p>
+  </section>
+
+  <section id="skills" class="skills section section-box">
+    <h2>Skills</h2>
+    <ul>
+      <li>HTML and CSS</li>
+      <li>Basic Java</li>
+      <li>Java</li>
+    </ul>
+  </section>
+
+  <section id="projects" class="projects section section-box">
+    <h2>Projects</h2>
+    <div class="project-list">
+      <div class="project">
+        <h3>Coming soon!</h3>
+      </div>
+      <div class="project">
+        <h3>Coming soon!</h3>
+      </div>
+      <div class="project">
+        <h3>Coming soon!</h3>
+      </div>
+    </div>
+  </section>
+
+  <section id="certificates" class="certificates section section-box">
+    <h2>Achievements & Certificates</h2>
+    <ul>
+      <li>Coming soon!</li>
+      <li>Coming soon!</li>
+      <li>Coming soon!</li>
+    </ul>
+  </section>
+
+  <section id="contact" class="contact section">
+    <h2>Contact Me</h2>
+    <form action="https://formsubmit.co/paulojamesrpdriguez@gmail.com" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+      <button type="submit" class="btn">Send Message</button>
+    </form>
+  </section>
+
+  <script>
+    // Scroll Animation
+    const revealElements = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+        }
+      });
+    }, { threshold: 0.1 });
+    revealElements.forEach(el => observer.observe(el));
+
+    // Hamburger Menu
+    const menuToggle = document.getElementById('menu-toggle');
+    const navLinks = document.getElementById('nav-links');
+    menuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+  </script>
+</body>
+
+</html>
